@@ -21,17 +21,17 @@ fn largest_char(list: &[char]) ->  char {
 }
 
 // ----------------------- In Functions Definitions
-// fn largest<T>(list: &[T]) -> T {
-//     let mut largest = list[0];
+fn largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+    let mut largest = list[0];
 
-//     for &item in list {
-//         if item > largest {
-//             largest = item;
-//         }
-//     }
+    for &item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
 
-//     return largest;
-// }
+    return largest;
+}
 
 // ----------------------- In Struct definitions
 struct Point<T, U> {
